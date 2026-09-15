@@ -1,37 +1,38 @@
-# IZV / Python Data Analysis
+# IZV / Data Analysis and Visualization in Python
 
-Academic Python project focused on exploratory data analysis, statistical testing and geospatial analysis of traffic accident data.
+Individual academic project from the Brno University of Technology course **Data Analysis and Visualization in Python (IZV)**. The project works with traffic accident data and focuses on data preprocessing, analysis, statistical testing, visualization and geospatial processing in Python.
 
-## Project overview
+## Course context
 
-The repository contains several parts of the original coursework:
+The IZV course covers data acquisition, processing, analysis and visualization in Python. The course project is structured around data acquisition, data preprocessing and analysis, and report generation.
 
-- `doc.py` - data preprocessing, aggregation and visualization of accident severity and intoxication-related patterns using Pandas, Matplotlib and Seaborn.
-- `geo.py` - geospatial processing and visualization with GeoPandas and Contextily, including clustering of accident locations with scikit-learn.
-- `stat.ipynb` - statistical hypothesis testing in Jupyter Notebook using Pandas and SciPy.
-- `doc.pdf` - original project document included with the coursework.
+Official course page: https://www.vut.cz/en/students/courses/detail/268299
 
-The original coursework files are preserved unchanged. This README and `requirements.txt` were added only to make the project easier to understand and run from GitHub.
+## Project contents
 
-## Analysis included
+- `doc.py` — preprocessing, aggregation and visualization of traffic accident data, including injury severity and intoxication-related patterns.
+- `geo.py` — geospatial processing and visualization with GeoPandas and Contextily, including clustering of accident locations.
+- `stat.ipynb` — statistical hypothesis testing in Jupyter Notebook using Pandas and SciPy.
+- `doc.pdf` — project report.
 
-The project demonstrates several data-analysis tasks on traffic accident records:
+The original coursework files are preserved unchanged. The README and `requirements.txt` were added later to make the repository easier to understand and run.
 
-- cleaning and filtering tabular data;
-- mapping coded values to readable categories;
+## Analysis
+
+The project includes:
+
+- filtering and preprocessing tabular data;
 - grouping and aggregation with Pandas;
-- comparison of injury severity by intoxication type;
-- analysis of intoxication patterns by vehicle brand;
-- statistical hypothesis testing using the chi-squared test;
-- conversion of tabular coordinates to geospatial data;
-- map visualization and coordinate-system transformation;
-- clustering of accident locations.
+- visualization of accident and injury patterns;
+- statistical hypothesis testing with the chi-squared test;
+- geospatial data conversion and coordinate-system transformation;
+- map visualization and clustering of accident locations.
 
 ## Requirements
 
-The code was written for Python 3.10 and uses the libraries listed in `requirements.txt`.
+The code was written for Python 3.10.
 
-Install dependencies with:
+Install the required libraries with:
 
 ```bash
 pip install -r requirements.txt
@@ -39,32 +40,26 @@ pip install -r requirements.txt
 
 ## Input data
 
-The scripts expect an input dataset named:
+The scripts expect a dataset named:
 
 ```text
 accidents.pkl.gz
 ```
 
-The dataset itself is not included in this repository.
+The dataset is not included in this repository.
 
 ## Running the project
 
-For the statistical analysis, open:
+Open `stat.ipynb` in Jupyter Notebook or JupyterLab for the statistical analysis.
 
-```text
-stat.ipynb
-```
-
-in Jupyter Notebook or JupyterLab.
-
-For the Python scripts, place `accidents.pkl.gz` in the repository root and run:
+To run the Python scripts, place `accidents.pkl.gz` in the repository root and run:
 
 ```bash
 python doc.py
 python geo.py
 ```
 
-`doc.py` writes generated figures to the `fig/` directory. `geo.py` generates geospatial visualizations of selected accident data.
+`doc.py` saves generated figures to the `fig/` directory. `geo.py` generates geospatial visualizations from selected accident data.
 
 ## Repository structure
 
@@ -77,7 +72,3 @@ python geo.py
 ├── stat.ipynb
 └── doc.pdf
 ```
-
-## Notes
-
-This repository contains the original academic project files. The portfolio additions are limited to documentation and dependency information; the original source files have not been rewritten for presentation purposes.
